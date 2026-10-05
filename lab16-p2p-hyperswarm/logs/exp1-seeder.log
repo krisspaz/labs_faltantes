@@ -1,0 +1,5 @@
+2026-10-05T21:02:47.185Z [seeder] appended sample.txt (541646 bytes) in 34 blocks
+2026-10-05T21:02:47.187Z [seeder] seeding key=ab019ce0950b0ad7b8d1023ba313b6b7955e1d1732f6c501620de1d0dee37214 length=34
+2026-10-05T21:02:47.187Z [seeder] discoveryKey=f5ba01ce… (lo que se anuncia en la DHT, no la key)
+2026-10-05T21:02:52.530Z [seeder] connected peer=2b3b19ff remote=10.196.207.47
+2026-10-05T21:02:52.870Z [seeder] SIGINT: seeder killed

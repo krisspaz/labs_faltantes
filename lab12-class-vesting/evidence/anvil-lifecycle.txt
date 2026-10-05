@@ -1,0 +1,40 @@
+== Simulación local en anvil (NO es el deploy de clase) — 2026-10-05T20:59:34Z ==
+beneficiaries (anvil #1..#7): 0x70997970C51812dc3A010C7d01b50e0d17dc79C8,0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC,0x90F79bf6EB2c4f870365E785982E1f101E93b906,0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65,0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc,0x976EA74026E726554dB657fA54763abd0C3a0aa9,0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+ClassVesting: 0x5fbdb2315678afecb367f032d93f642f64180aa3
+ClassToken:   0xa16E02E87b7454126E5E10d957A927A7F5B5d2be
+deploy tx: 0x86a59da794bc168a2b57d1e7564e1e26426bb3fe41c1ce0b464f141b18a4d1bf
+totalSupply: 7000000000000000000000 [7e21]
+balanceOf(vesting): 7000000000000000000000 [7e21]
+cliff: 1790186400 [1.79e9] = miércoles, 23 de septiembre de 2026, 12:00:00 CST
+end:   1790272800 [1.79e9] = jueves, 24 de septiembre de 2026, 12:00:00 CST
+allocation(student1 0x70997970C51812dc3A010C7d01b50e0d17dc79C8): 1000000000000000000000 [1e21]
+allocation(student2 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC): 1000000000000000000000 [1e21]
+allocation(student3 0x90F79bf6EB2c4f870365E785982E1f101E93b906): 1000000000000000000000 [1e21]
+allocation(student4 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65): 1000000000000000000000 [1e21]
+allocation(student5 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc): 1000000000000000000000 [1e21]
+allocation(student6 0x976EA74026E726554dB657fA54763abd0C3a0aa9): 1000000000000000000000 [1e21]
+allocation(student7 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955): 1000000000000000000000 [1e21]
+
+-- t = cliff - 7d (antes del cliff) --
+releasable(student1): 0
+claim student1 -> revert: 0x969bf728
+
+-- t = cliff + 6h (esperado 100 + 900/4 = 325) --
+releasable(student1): 325000000000000000000 [3.25e20]
+claim student1: tx=0xb2f6155fd3ec99f709036d02abc79fc1dd66e2d5cb88df8aa6a61ce4ba0007dc status=0x1
+balanceOf(student1): 325000000000000000000 [3.25e20]
+claim outsider (anvil #8) -> revert: 0xc5d0b69d
+claimed(student2) tras claim de student1: 0
+
+-- t = end + 1min --
+student1 claim: tx=0x95d235b8ab0725c5dc74a0ef9c16e56ee559274e434fee708bc3d696718cddf6 status=0x1 claimed=1000000000000000000000 [1e21]
+student2 claim: tx=0x7ba0ccd6416c4940e28a3e7ff6165d458f9cd1dd5871000bb024d3d471a8d96b status=0x1 claimed=1000000000000000000000 [1e21]
+student3 claim: tx=0x240855a1a2d981e96dbe181ba30371fa3fef9ae9e4d5907d09c5e3aec008cc9a status=0x1 claimed=1000000000000000000000 [1e21]
+student4 claim: tx=0x0203367a362625f84b568d13108f1de7c58c83f7fc8b9252118772340b6684fb status=0x1 claimed=1000000000000000000000 [1e21]
+student5 claim: tx=0xde56d9dcb4077f045df55fcaa5c4ceaa2aa361e2b7eb2db862e7e58ee2b2bdae status=0x1 claimed=1000000000000000000000 [1e21]
+student6 claim: tx=0x6231e8830441bcdf0859d7aa9ca728f3568224b57d07431be0da69abb42dec0a status=0x1 claimed=1000000000000000000000 [1e21]
+student7 claim: tx=0x1f31696e3b408de0d81c3c2a347272604fddf03dc503a0f1271c81767cc4b3c3 status=0x1 claimed=1000000000000000000000 [1e21]
+claim student1 otra vez -> revert: 0x969bf728
+balanceOf(vesting) final: 0
+
+# Selectores de revert: 0x969bf728 = NothingToClaim()  ·  0xc5d0b69d = NotBeneficiary(address)

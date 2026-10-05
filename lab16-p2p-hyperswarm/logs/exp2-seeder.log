@@ -1,0 +1,5 @@
+2026-10-05T21:03:00.466Z [seeder] seeding key=ab019ce0950b0ad7b8d1023ba313b6b7955e1d1732f6c501620de1d0dee37214 length=34
+2026-10-05T21:03:00.467Z [seeder] discoveryKey=f5ba01ce… (lo que se anuncia en la DHT, no la key)
+2026-10-05T21:03:05.304Z [seeder] connected peer=9b503d53 remote=10.196.207.47
+2026-10-05T21:03:08.063Z [seeder] SIGINT: seeder killed
+2026-10-05T21:03:08.000Z [operator] kill -INT seeder (pid 28075)

@@ -1,0 +1,15 @@
+== BTC: verificación 1 (mempool.space) vs verificación 2 (blockstream.info)
+  03010ef205d9… hex idéntico (205 bytes)
+  txid recalculado localmente: OK
+  34039191b230… hex idéntico (311 bytes)
+  txid recalculado localmente: OK
+  preimage (witness[1]) hash160 = 9e3bb037d5286075b94cac817c5b0179611298a2; en el script: 9e3bb037d5286075b94cac817c5b0179611298a2
+  sha256(preimage) = 6720b3c671f096c5db3955a4834bffe99e5ff1440416bdef6566c358d810f8b5  ← payment hash de la factura Lightning
+  output 0 del lockup lo gasta: 34039191b230… (OK)
+== ETH: verificación 1 (https://eth.drpc.org) vs verificación 2 (https://eth-mainnet.public.blastapi.io)
+  0x3061cd37ce… raw idéntico
+  keccak(raw) = 0x3061cd37ce12… (hash OK)
+  0x7ec4aac5fd… raw idéntico
+  keccak(raw) = 0x7ec4aac5fd92… (hash OK)
+  sha256(preimage del Claim) = 712071d518bf6c5407f5e606c32cfe654541c72a3879dbc5edf293e8934aad54
+  preimageHash del Lockup    = 712071d518bf6c5407f5e606c32cfe654541c72a3879dbc5edf293e8934aad54 (OK)

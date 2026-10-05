@@ -1,0 +1,5 @@
+2026-10-05T21:01:36.814Z [peerB] self=5171b62a topic="cs031-s19-20261005" sha256=2c14b1e1…
+2026-10-05T21:01:41.009Z [peerB] connected peer=9fa13197 remote=10.196.207.47:49737 initiator=true
+2026-10-05T21:01:41.011Z [peerB] announced + lookup done in 4196 ms, peers=1
+2026-10-05T21:01:41.029Z [peerB] recv peer=9fa13197 payload="ping desde peerA"
+2026-10-05T21:02:03.782Z [peerB] closed peer=9fa13197

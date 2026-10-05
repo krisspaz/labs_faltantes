@@ -1,0 +1,15 @@
+Ran 8 tests for test/LabToken.t.sol:LabTokenTest
+[PASS] testFuzz_TransferConservesValue(uint256,uint16) (runs: 1000, μ: 98053, ~: 105305)
+[PASS] test_ExemptSkipsFee() (gas: 79825)
+[PASS] test_Metadata() (gas: 23229)
+[PASS] test_RevertWhen_FeeTooHigh() (gas: 11968)
+[PASS] test_RevertWhen_InsufficientBalance() (gas: 32900)
+[PASS] test_RevertWhen_NotOwner() (gas: 14813)
+[PASS] test_TransferChargesFee() (gas: 85821)
+[PASS] test_TransferFromUsesAllowance() (gas: 91413)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 29.00ms (28.73ms CPU time)
+Ran 2 tests for test/LabToken.invariant.t.sol:LabTokenInvariantTest
+[PASS] invariant_BalancesSumToSupply() (runs: 256, calls: 12800, reverts: 0)
+[PASS] invariant_SupplyConstant() (runs: 256, calls: 12800, reverts: 0)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 1.47s (2.28s CPU time)
+Ran 2 test suites in 1.47s (1.50s CPU time): 10 tests passed, 0 failed, 0 skipped (10 total tests)

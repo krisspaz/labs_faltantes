@@ -1,0 +1,11 @@
+Escaneado hasta bloque 95020246
+Eventos Transfer: {'mint': 241}
+Holders: 214  suma: 11917
+  0xc24e55aea81149d6f71483efb7b76653981bc58e 10300 (86.4%)
+  0x9bbb44261fc62785b520c3dd8e8d5e9933163311 400 (3.4%)
+  0xa7e1ec69c8915df1ae1d127904aacc2382932822 250 (2.1%)
+  0xb0b857891defd93e4a4a66945e237238e266fb8e 100 (0.8%)
+  0x34515ca4905441cbf5a71be80426fea661794782 70 (0.6%)
+min 1 mediana 1 max 10300
+holders con exactamente 1 token: 116
+primer mint bloque 93918646 último 95018403

@@ -1,0 +1,9 @@
+2026-10-05T21:02:52.515Z [downloader] connected peer=2ad9901d remote=10.196.207.47:49737
+2026-10-05T21:02:52.552Z [downloader] core length=34 blocks
+2026-10-05T21:02:52.572Z [downloader] block 0/34 peers=1
+2026-10-05T21:02:52.678Z [downloader] block 8/34 peers=1
+2026-10-05T21:02:52.751Z [downloader] block 16/34 peers=1
+2026-10-05T21:02:52.814Z [downloader] block 24/34 peers=1
+2026-10-05T21:02:52.861Z [downloader] block 32/34 peers=1
+2026-10-05T21:02:52.866Z [downloader] COMPLETE 541646 bytes in 312 ms sha256=92d9dc2d38e4aac5…
+2026-10-05T21:02:52.866Z [downloader] peer closed peer=2ad9901d (peers left=1)

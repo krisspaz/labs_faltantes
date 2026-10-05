@@ -1,0 +1,7 @@
+2026-10-05T21:01:28.790Z [peerA] self=9fa13197 topic="cs031-s19-20261005" sha256=2c14b1e1…
+2026-10-05T21:01:33.154Z [peerA] announced + lookup done in 4363 ms, peers=0
+2026-10-05T21:01:41.023Z [peerA] connected peer=5171b62a remote=10.196.207.47:49738 initiator=false
+2026-10-05T21:01:41.025Z [peerA] recv peer=5171b62a payload="ping desde peerB"
+2026-10-05T21:02:03.782Z [peerA] socket error peer=5171b62a ECONNRESET
+2026-10-05T21:02:03.783Z [peerA] closed peer=5171b62a
+2026-10-05T21:02:08.793Z [peerA] TIMEOUT: no peers after 40000 ms
