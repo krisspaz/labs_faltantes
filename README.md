@@ -10,6 +10,7 @@ Un folder por lab. Cada link de abajo es el que va en el carnet.
 | **13** Token due diligence | S15 | [DUE_DILIGENCE.md](https://github.com/krisspaz/labs_faltantes/blob/main/lab13-token-due-diligence/DUE_DILIGENCE.md) · [MEMO.md](https://github.com/krisspaz/labs_faltantes/blob/main/lab13-token-due-diligence/MEMO.md) | [lab13](https://github.com/krisspaz/labs_faltantes/tree/main/lab13-token-due-diligence) | ✅ Completo |
 | **15** IPFS + Pinata | S18 | [STORAGE.md](https://github.com/krisspaz/labs_faltantes/blob/main/lab15-ipfs-pinata/STORAGE.md) | [lab15](https://github.com/krisspaz/labs_faltantes/tree/main/lab15-ipfs-pinata) | ⏳ falta correr `run-lab.sh` con cuenta Pinata |
 | **16** Pear · Hyperswarm · Hypercore | S19 | [P2P.md](https://github.com/krisspaz/labs_faltantes/blob/main/lab16-p2p-hyperswarm/P2P.md) | [lab16](https://github.com/krisspaz/labs_faltantes/tree/main/lab16-p2p-hyperswarm) | ✅ Logs reales y kill-seeder · ⏳ repetir kickoff con un compañero |
+| **17** Tor Browser + threat model | S20 | [THREAT.md](https://github.com/krisspaz/labs_faltantes/blob/main/lab17-tor-threat/THREAT.md) | [lab17](https://github.com/krisspaz/labs_faltantes/tree/main/lab17-tor-threat) | ✅ Circuito real, nuevo circuito, contraste y THREAT.md |
 
 ## Clonar
 
