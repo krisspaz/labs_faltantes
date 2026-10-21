@@ -11,6 +11,11 @@ Un folder por lab. Cada link de abajo es el que va en el carnet.
 | **15** IPFS + Pinata | S18 | [STORAGE.md](https://github.com/krisspaz/labs_faltantes/blob/main/lab15-ipfs-pinata/STORAGE.md) | [lab15](https://github.com/krisspaz/labs_faltantes/tree/main/lab15-ipfs-pinata) | ⏳ falta correr `run-lab.sh` con cuenta Pinata |
 | **16** Pear · Hyperswarm · Hypercore | S19 | [P2P.md](https://github.com/krisspaz/labs_faltantes/blob/main/lab16-p2p-hyperswarm/P2P.md) | [lab16](https://github.com/krisspaz/labs_faltantes/tree/main/lab16-p2p-hyperswarm) | ✅ Logs reales y kill-seeder · ⏳ repetir kickoff con un compañero |
 | **17** Tor Browser + threat model | S20 | [THREAT.md](https://github.com/krisspaz/labs_faltantes/blob/main/lab17-tor-threat/THREAT.md) | [lab17](https://github.com/krisspaz/labs_faltantes/tree/main/lab17-tor-threat) | ✅ Circuito real, nuevo circuito, contraste y THREAT.md |
+| **18** Signal + WireGuard | S21 | [E2EE.md](https://github.com/krisspaz/labs_faltantes/blob/main/lab18-signal-wireguard/E2EE.md) | [lab18](https://github.com/krisspaz/labs_faltantes/tree/main/lab18-signal-wireguard) | ✅ E2EE.md y tabla B · ⏳ Safety Number y túnel con compañero |
+| **19** Nostr multi-relay | S22 | [README](https://github.com/krisspaz/labs_faltantes/blob/main/lab19-nostr-relays/README.md) | [lab19](https://github.com/krisspaz/labs_faltantes/tree/main/lab19-nostr-relays) | ⏳ en clase |
+| **20** Global Chess Passport (caso DID/VC) | S23 | reporte del trío en el carnet | — | ⏳ en clase (sin código) |
+| **21** Cueva ZK + caso real | S24 | foto de tabla de rondas + ficha | — | ⏳ en clase (papel) |
+| **22** Auditoría checkout ZK | S25 | foto de A.2 + A.3 + reflexión | — | ⏳ en clase (papel) |
 
 ## Clonar
 

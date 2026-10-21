@@ -1,0 +1,4 @@
+# Nunca subir llaves privadas ni configs con PrivateKey
+*.key
+*.conf
+wg/out/
