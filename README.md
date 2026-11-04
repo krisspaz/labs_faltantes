@@ -16,6 +16,7 @@ Un folder por lab. Cada link de abajo es el que va en el carnet.
 | **20** Global Chess Passport (caso DID/VC) | S23 | reporte del trío en el carnet | — | ⏳ en clase (sin código) |
 | **21** Cueva ZK + caso real | S24 | foto de tabla de rondas + ficha | — | ⏳ en clase (papel) |
 | **22** Auditoría checkout ZK | S25 | foto de A.2 + A.3 + reflexión | — | ⏳ en clase (papel) |
+| **24** IA local vs nube | — | [README](https://github.com/krisspaz/labs_faltantes/blob/main/lab24-ia-local/README.md) | [lab24](https://github.com/krisspaz/labs_faltantes/tree/main/lab24-ia-local) | ✅ Ficha y capturas · ⏳ tabla A.3 en clase |
 
 ## Clonar
 
