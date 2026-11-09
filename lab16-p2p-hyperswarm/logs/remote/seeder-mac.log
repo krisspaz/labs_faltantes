@@ -1,0 +1,7 @@
+2026-11-09T22:13:38.068Z [seeder] appended sample.txt (541646 bytes) in 34 blocks
+2026-11-09T22:13:38.069Z [seeder] seeding key=3e1c764a4bdecd70613be10f8010319bd53753e68931361b39c59561d1012a66 length=34
+2026-11-09T22:13:38.069Z [seeder] discoveryKey=337db82f… (lo que se anuncia en la DHT, no la key)
+2026-11-09T22:14:19.653Z [seeder] connected peer=a0c9d529 remote=132.196.19.238
+2026-11-09T22:14:33.282Z [seeder] connected peer=1b1f5492 remote=132.196.19.238
+2026-11-09T22:14:45.000Z [seeder] KILL: kill -9 del seeder a mitad de la descarga 2 (manual, desde la Mac)
+2026-11-09T22:14:51Z [seeder] KILL: kill -9 del seeder a mitad de la descarga 2 (desde la Mac)

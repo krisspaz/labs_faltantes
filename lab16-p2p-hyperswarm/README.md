@@ -2,6 +2,7 @@
 
 - **Informe:** [P2P.md](P2P.md) (diagrama, infraestructura, liability, 15-2026, comentarios)
 - **Logs del kickoff:** [`logs/kickoff-peerA.log`](logs/kickoff-peerA.log), [`logs/kickoff-peerB.log`](logs/kickoff-peerB.log) e intento fallido `logs/attempt1-*`
+- **Entre dos máquinas y dos redes (sin compañero):** `logs/remote/` (Mac ↔ runner de GitHub Actions): mensaje, descarga completa y kill-seeder. Ver P2P.md §9
 - **Kill-seeder:** `logs/exp1-*` (completo), `logs/exp2-*` (seeder muerto → stall), `logs/exp3-*` (con reseeder → completo)
 
 ```bash

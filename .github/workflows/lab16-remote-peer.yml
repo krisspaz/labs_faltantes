@@ -1,0 +1,38 @@
+# Lab 16: segundo peer en otra máquina y otra red (runner de GitHub Actions), porque no hubo compañero.
+# Solo corre al hacer push a la rama lab16-remote-peer. No usa secretos: la key del Hypercore es pública.
+name: lab16-remote-peer
+on:
+  push:
+    branches: [lab16-remote-peer]
+jobs:
+  peer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: lab16-p2p-hyperswarm
+    env:
+      TOPIC: cs031-s19-20261109
+      CORE_KEY: 3e1c764a4bdecd70613be10f8010319bd53753e68931361b39c59561d1012a66
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm ci
+      - name: Parte A+B (peer.js) en paralelo con las descargas
+        run: |
+          mkdir -p out
+          TIMEOUT_MS=420000 node peer.js gh-runner "$TOPIC" > out/peer-runner.log 2>&1 &
+          echo "== descarga 1: completa (100 ms/bloque)"
+          node download.js "$CORE_KEY" out/downloaded1.txt 100 | tee out/download1-runner.log || true
+          sleep 5
+          echo "== descarga 2: lenta (1000 ms/bloque); el seeder se mata a mitad desde la Mac"
+          node download.js "$CORE_KEY" out/downloaded2.txt 1000 | tee out/download2-runner.log || true
+          wait
+          echo "== peer.js"; cat out/peer-runner.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lab16-runner-logs
+          path: lab16-p2p-hyperswarm/out/*.log

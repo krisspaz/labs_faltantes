@@ -1,10 +1,10 @@
 # P2P.md — Lab 16: Pear · Hyperswarm · Hypercore (Sesión 19)
 
-> **Alcance honesto de la evidencia.** Todos los logs de `logs/` son reales y salieron de este repo el
-> 2026-10-05, pero los dos peers corrieron **en la misma Mac** (dos procesos Node). Por eso la "IP remota"
-> que ve cada uno es la IP LAN de la propia máquina (`10.196.207.47`). La conexión sí pasó por la DHT
-> pública: ambos procesos se encontraron por el topic, no por localhost. Para cumplir "dos peers de la
-> clase", la sección [Kickoff con un compañero](#kickoff-con-un-compañero) explica cómo repetirlo.
+> **Alcance honesto de la evidencia.** Todos los logs de `logs/` son reales. Los del 2026-10-05 son dos peers
+> **en la misma Mac**, así que la "IP remota" es la IP LAN de la propia máquina (`10.196.207.47`). No tuve
+> compañero, así que el 2026-11-09 repetí el lab entre **dos máquinas y dos redes distintas**: mi Mac (red
+> residencial en Guatemala) y un runner de GitHub Actions (Azure, EE. UU.) que yo controlo. Ver la
+> [sección 9](#9-repetición-entre-dos-máquinas-y-dos-redes-2026-11-09).
 
 ## 1. Qué construimos
 
@@ -120,8 +120,8 @@ quita un punto de takedown, pero no quita al sujeto obligado.
 
 ## 8. Comentarios de aprendizaje: qué vio nuestro peer de nosotros
 
-- **IP y puerto:** `remote=10.196.207.47:49737/49738` (aquí, la IP LAN porque compartíamos red). Entre dos
-  redes distintas sería nuestra IP pública. Es el mismo dato que usa un titular de derechos para identificar
+- **IP y puerto:** `remote=10.196.207.47:49737/49738` en la prueba local (IP LAN). Entre redes distintas
+  (sección 9) el runner vio mi IP pública real (`181.174.x.x:14450`). Es el mismo dato que usa un titular de derechos para identificar
   seeders.
 - **Identidad:** una public key estable por proceso (`self=9fa13197…`) que no está ligada a nuestro nombre,
   salvo porque el payload decía `ping desde {carnet}`: la capa de aplicación nos des-anonimizó sola.
@@ -132,15 +132,45 @@ quita un punto de takedown, pero no quita al sujeto obligado.
 - **Muerte de peers:** se detecta tarde (~13 s), no al instante. Las apps P2P necesitan timeouts y reintentos
   hacia otros peers como parte del diseño, no como caso borde.
 
-## Kickoff con un compañero
+## 9. Repetición entre dos máquinas y dos redes (2026-11-09)
 
-```bash
-npm install
-node peer.js <mi-carnet> "cs031-s19-<YYYYMMDD de la clase>"     # mismo string en ambos lados
-# arrancar uno, esperar el "announced + lookup done", y luego el otro
-```
+Sin compañero, el segundo peer fue un runner de GitHub Actions
+([`.github/workflows/lab16-remote-peer.yml`](../.github/workflows/lab16-remote-peer.yml)): Ubuntu, Node 24 y
+el mismo `peer.js` / `download.js` de este folder. Corre al hacer push a la rama `lab16-remote-peer` y no usa
+secretos. La key del Hypercore es pública: solo da lectura. Topic: `cs031-s19-20261109` (sha256 `d3275081…`).
 
-Para el archivo: `node seed.js sample.txt` en una máquina y `node download.js <key> out.txt 300` en la otra.
+Logs: [`logs/remote/`](logs/remote/) (Mac) y [`logs/remote/runner/`](logs/remote/runner/) (runner).
+Mi IP pública aparece tachada (`181.174.x.x`) y la corrida de Actions se borró porque sus logs eran públicos.
+
+**Mensaje P2P (los dos lados):**
+
+| Hora (UTC) | Lado | Evento |
+|---|---|---|
+| 22:14:03 | Mac `3308c200` | join; announce + lookup en 5998 ms, peers=0 |
+| 22:14:18 | runner `f552fb97` | join |
+| 22:14:21.305 | runner | `connected peer=3308c200 remote=181.174.x.x:14450 initiator=true` |
+| 22:14:21.357 | Mac | `connected peer=f552fb97 remote=132.196.19.238:36971 initiator=false` |
+| 22:14:21.360 | Mac | `recv payload="ping desde gh-runner"` |
+| 22:14:21.405 | runner | `recv payload="ping desde kris-mac"` |
+
+Aquí cada lado vio la **IP pública** del otro, no una IP LAN: el runner vio la IP de mi ISP y yo la de Azure.
+El runner tardó unos 3 s en conectar desde que entró y el holepunch funcionó sin relay.
+
+**Archivo + kill-seeder entre redes** (`sample.txt`, 541,646 B, 34 bloques de 16 KiB; seeder en la Mac):
+
+| Descarga (runner) | Throttle | Resultado |
+|---|---|---|
+| 1 | 100 ms/bloque | `COMPLETE 541646 bytes in 7404 ms`, sha256 `92d9dc2d…` |
+| 2 | 1000 ms/bloque | `kill -9` al seeder a las 22:14:51 → el runner ve `peer closed` a las 22:14:59 (unos 8 s después) y `STALLED at block 11/34 ... REQUEST_TIMEOUT (peers=0)`, con 11 bloques (180,224 B) |
+
+No había segundo seeder, así que la descarga 2 quedó incompleta. Coincide con el exp2 local: sin otro seeder,
+el contenido deja de estar disponible. Los 11 bloques que bajó siguen verificados contra la key (Merkle), pero
+no forman el archivo completo.
+
+**Qué aprendí de hacerlo entre redes:** la DHT y el holepunch funcionaron entre una red residencial y un
+datacenter sin configurar puertos. Lo que el peer ve de mí deja de ser una IP LAN inofensiva y pasa a ser mi
+IP pública, que es exactamente el dato con el que se identifica a un seeder. Por eso tuve que tacharla antes de
+publicar estos logs.
 
 ## Fuentes
 

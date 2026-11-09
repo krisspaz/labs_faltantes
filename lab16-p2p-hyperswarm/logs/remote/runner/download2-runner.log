@@ -1,0 +1,7 @@
+2026-11-09T22:14:33.225Z [downloader] connected peer=b76676f4 remote=181.174.x.x:14453
+2026-11-09T22:14:33.431Z [downloader] core length=34 blocks
+2026-11-09T22:14:33.660Z [downloader] block 0/34 peers=1
+2026-11-09T22:14:42.910Z [downloader] block 8/34 peers=1
+2026-11-09T22:14:59.365Z [downloader] peer closed peer=b76676f4 (peers left=1)
+2026-11-09T22:15:01.156Z [downloader] STALLED at block 11/34 after 27725 ms: REQUEST_TIMEOUT (peers=0)
+2026-11-09T22:15:01.156Z [downloader] partial: 11 blocks (180224 bytes)
