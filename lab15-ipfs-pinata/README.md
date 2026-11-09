@@ -1,8 +1,8 @@
 # Lab 15 — IPFS + Pinata: CID + pin + resolve (Sesión 18)
 
 - [STORAGE.md](STORAGE.md): política de datos (clasificación, pin vs never-permanent, 15-2026, promesas)
-- `evidence/lab-log.md`: pin activo + resolve por 3 gateways (lo genera `run-lab.sh`)
-- Gateway: <GATEWAY_URL>
+- `evidence/lab-log.md`: pin activo + resolve por gateway (Pinata y Filebase; ipfs.io/dweb.link → 429) (lo genera `run-lab.sh`)
+- Gateway: https://gateway.pinata.cloud/ipfs/bafkreiasiq4ogh45rx7z33dpzedtzdk45fbxi2dwlit3r3burzg7octerm
 
 ## Correr
 
@@ -17,5 +17,5 @@ El JWT nunca se imprime ni se commitea. Si se filtra: revocarlo en Pinata y crea
 
 - **Qué pasa si unpinneamos:** el CID sigue siendo válido (es un hash), pero el contenido deja de resolver cuando
   ningún nodo lo tiene. El CID no promete disponibilidad; el pin sí, y solo mientras se pague.
-- **Gateway vs protocolo:** Pinata, ipfs.io y dweb.link son tres servidores HTTP distintos que devuelven los
+- **Gateway vs protocolo:** Pinata y Filebase son dos servidores HTTP de empresas distintas que devuelven los
   mismos bytes para el mismo CID. El contenido no "vive" en ninguno: lo identifica su hash.

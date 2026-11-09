@@ -1,0 +1,12 @@
+{
+  "count": 1,
+  "rows": [
+    {
+      "ipfs_pin_hash": "bafkreiasiq4ogh45rx7z33dpzedtzdk45fbxi2dwlit3r3burzg7octerm",
+      "size": 175,
+      "date_pinned": "2026-11-09T22:31:13.773Z",
+      "date_unpinned": null,
+      "name": "cs031-lab15-venture-hello"
+    }
+  ]
+}

@@ -9,15 +9,15 @@
 | Campo | Valor |
 |---|---|
 | Archivo | `venture-hello.json` (175 bytes, sin PII) |
-| CID | `<CID>` |
+| CID | `bafkreiasiq4ogh45rx7z33dpzedtzdk45fbxi2dwlit3r3burzg7octerm` |
 | Provider de pin | Pinata (API key con scope mínimo: `pinFileToIPFS` + `pinList`, guardada en `.env`, gitignored) |
-| Gateway | <GATEWAY_URL> |
-| Fecha | <FECHA> |
+| Gateway | https://gateway.pinata.cloud/ipfs/bafkreiasiq4ogh45rx7z33dpzedtzdk45fbxi2dwlit3r3burzg7octerm |
+| Fecha | 2026-11-09T22:31:12Z |
 | Evidencia | `evidence/lab-log.md` (pinList + `curl` contra 3 gateways), `evidence/upload-response.json` |
 
 **Si unpinneamos, esperamos que** el CID siga siendo válido como identificador pero deje de resolver en cuanto
 el garbage collector de Pinata borre los bloques y ningún otro nodo los tenga en caché o pinneados. Los
-gateways públicos pueden servirlo unas horas o días desde su caché. Después, una petición a `/ipfs/<CID>`
+gateways públicos pueden servirlo unas horas o días desde su caché. Después, una petición a `/ipfs/bafkreiasiq4ogh45rx7z33dpzedtzdk45fbxi2dwlit3r3burzg7octerm`
 hace timeout. Nada garantiza que desaparezca: si alguien lo pinneó por su cuenta, sigue vivo.
 
 ## Clasificación: sensibilidad × durabilidad
@@ -52,8 +52,10 @@ controlamos.
 
 **Gateway vs protocolo:** `https://<gateway>/ipfs/<CID>` es un servidor HTTP centralizado que habla IPFS por
 nosotros. Si Pinata cae, su gateway cae, pero el contenido sigue en la red si otro nodo lo tiene. Por eso
-el log verifica el mismo CID en `ipfs.io` y `dweb.link`: el CID es el identificador, el gateway es solo una
-puerta.
+el log verifica el mismo CID en un gateway de otra empresa (Filebase), que lo encontró en la red sin que
+nosotros se lo subiéramos: el CID es el identificador, el gateway es solo una puerta. Dato del lab: el
+2026-11-09 `ipfs.io` y `dweb.link` respondieron `429` con el aviso de que pasan a ser solo service-worker
+gateway; un gateway público no es infraestructura con la que se pueda contar.
 
 ## Oración 15-2026
 
