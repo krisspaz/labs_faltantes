@@ -16,7 +16,7 @@ Un folder por lab. Cada link de abajo es el que va en el carnet.
 | **20** Global Chess Passport (caso DID/VC) | S23 | [README](https://github.com/krisspaz/labs_faltantes/blob/main/lab20-chess-passport/README.md) | [lab20](https://github.com/krisspaz/labs_faltantes/tree/main/lab20-chess-passport) | ✅ Reporte completo (triángulo, quién ve qué, revocación/correlación, fallas y cambio de diseño) |
 | **21** Cueva ZK + caso real | S24 | [README](https://github.com/krisspaz/labs_faltantes/blob/main/lab21-cueva-zk/README.md) + fotos | [lab21](https://github.com/krisspaz/labs_faltantes/tree/main/lab21-cueva-zk) | ✅ tabla de rondas (aleatoria) · ⏳ foto + ficha + reflexión |
 | **23** MPC + inventario post-cuántico | S26 | [README](https://github.com/krisspaz/labs_faltantes/blob/main/lab23-mpc-postcuantico/README.md) + fotos | [lab23](https://github.com/krisspaz/labs_faltantes/tree/main/lab23-mpc-postcuantico) | ✅ promedio secreto + colusión · ⏳ foto A.2/A.4 + reflexión |
-| **24** IA local con QV.AC | S27 | [README](https://github.com/krisspaz/labs_faltantes/blob/main/lab24-ia-local/README.md) | [lab24](https://github.com/krisspaz/labs_faltantes/tree/main/lab24-ia-local) | ⏳ medir L1, L2 y nube con cronómetro |
+| **24** IA local con QV.AC | S27 | [README](https://github.com/krisspaz/labs_faltantes/blob/main/lab24-ia-local/README.md) | [lab24](https://github.com/krisspaz/labs_faltantes/tree/main/lab24-ia-local) | ✅ Ficha, evidencia y reflexión · ⚠️ A.2 no se pudo medir (modelo pequeño ~5 h sin terminar) |
 
 Sesión 25 / Lab 22 no se impartió (handbook CS031, 2026-10-26). Labs 19–24 eran en clase; hechos en solitario fuera de clase.
 
