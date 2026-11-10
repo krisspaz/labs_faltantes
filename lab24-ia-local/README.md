@@ -24,6 +24,12 @@ Ejemplos: 1B → 0.5 GB · 2B → 1 GB · 4B → 2 GB · 8B → 4 GB (más marge
 - Más rápido: ____ porque ____
 - Mejores respuestas: ____ porque ____
 
+### A.2 Las tres instrucciones (copiar exactas, una conversación nueva por cada una)
+
+1. **Resumir:** Resume en 3 viñetas, en español, este aviso: "La cooperativa Agro Cuchumatanes Prueba informa que la entrega de semillas de maíz se mueve del lunes 3 al jueves 6 por la lluvia. Traigan su tarjeta de socio. Quien no pueda llegar puede mandar a un familiar con una nota firmada. El fertilizante se entrega el mismo día, solo a socios al día con su cuota."
+2. **Calcular:** Un modelo tiene 8 mil millones de parámetros y está cuantizado a 4 bits. ¿Cuántos GB de memoria necesita, aproximadamente, sin contar el margen? Explica la cuenta en dos líneas.
+3. **Redactar:** Escribe un mensaje corto de WhatsApp (máximo 60 palabras), amable y en español de Guatemala, para avisarle a un cliente ficticio de Remesas Volcán Prueba que su envío está listo para recoger en agencia y que debe llevar su documento de identificación.
+
 ### A.3 Tabla de medición
 
 Instrucciones exactas de A.2 (una conversación nueva por cada una; L1 y L2 sin internet).

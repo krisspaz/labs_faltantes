@@ -18,16 +18,22 @@ La aritmética y la colusión sí se pueden comprobar.
 
 ![A.2](a2-promedio.jpg)
 
-| | Pieza para P1 | Pieza para P2 | Pieza para P3 | Suma (= salario) |
+Salarios ficticios del session doc (A.1): Ana Q5,500 · Beto Q7,300 · Caro Q8,400. Piezas generadas al azar
+(`secrets` de Python); lo hice solo, haciendo de las 3 personas.
+
+- Ana: 4,400 + 3,100 + (−2,000) = 5,500
+- Beto: (−2,700) + (−1,800) + 11,800 = 7,300
+- Caro: 800 + 700 + 6,900 = 8,400
+
+| Integrante | Pieza que se quedó | Pieza recibida 1 | Pieza recibida 2 | Suma parcial |
 |---|---|---|---|---|
-| P1 | ____ | ____ | ____ | ____ |
-| P2 | ____ | ____ | ____ | ____ |
-| P3 | ____ | ____ | ____ | ____ |
-| **Suma parcial** | ____ | ____ | ____ | **Total ____ · Promedio ____** |
+| Ana | 4,400 | −2,700 (de Beto) | 800 (de Caro) | 2,500 |
+| Beto | −1,800 | 3,100 (de Ana) | 700 (de Caro) | 2,000 |
+| Caro | 6,900 | −2,000 (de Ana) | 11,800 (de Beto) | 16,700 |
 
-Promedio real al voltear: ____ · ¿Coincide? ____
+Total = 2,500 + 2,000 + 16,700 = **21,200** · Promedio = **7,066.67** · ¿Coincide con las tarjetas? Sí (5,500 + 7,300 + 8,400 = 21,200)
 
-**Colusión (P1 + P2 contra P3):** juntaron ____ → salario de P3 = total − ____ − ____ = ____
+**Colusión (Ana + Beto contra Caro):** juntaron sus dos salarios y el total → Caro = 21,200 − 5,500 − 7,300 = **8,400**. ¿Correcto? Sí.
 
 ### A.4 Inventario post-cuántico (foto)
 

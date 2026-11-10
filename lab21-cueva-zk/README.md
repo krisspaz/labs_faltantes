@@ -18,6 +18,16 @@ nadie ajeno controla el reto. Eso es justo lo que no convence a un tercero (ver 
 
 ![tabla de rondas](tabla-rondas.jpg)
 
+Tiros generados con un generador aleatorio seguro (`secrets` de Python), equivalente a una moneda: cara = A, sello = B.
+Lo hice solo: fui probador y verificador a la vez.
+
+| Partida | Papel | Rondas (reto → resultado) | Cayó en |
+|---|---|---|---|
+| 1 | SÍ sabe | B, A, A, B, A, B, A, A, B, B → todas OK | — (10/10) |
+| 2 | NO sabe | R1: escribí A, reto B → X | ronda 1 |
+| 3 | SÍ sabe | A, A, A, A, A, B, A, B, A, A → todas OK | — (10/10) |
+| 4 | NO sabe | R1: escribí B, reto A → X | ronda 1 |
+
 | n rondas | probabilidad de pasar sin saber (½ⁿ) |
 |---|---|
 | 1 | 1/2 = 50 % |
